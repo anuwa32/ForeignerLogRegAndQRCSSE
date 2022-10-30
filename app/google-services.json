@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1041690578977",
+    "project_id": "foreignerloginreg",
+    "storage_bucket": "foreignerloginreg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041690578977:android:e88781cd042f4ef0e2d360",
+        "android_client_info": {
+          "package_name": "com.example.foreignerloginreg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041690578977-m6r4g02jcbmmvn10ldsl0ug7d2ci80s2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7OD4MoKuqxvAi6ZT_RHwLOI6vOyqYy6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041690578977-m6r4g02jcbmmvn10ldsl0ug7d2ci80s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

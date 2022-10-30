@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    style="@style/AppTheme.MaterialTheme"
+    tools:context=".GenerateQRCodeActivity">
+
+
+    <TextView
+        android:id="@+id/idPublicTr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:elevation="1dp"
+        android:padding="4dp"
+        android:text="Public Transportation
+                         Sri-Lanka"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/idQRCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        >
+
+        <TextView
+            android:id="@+id/idGenerateQR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:elevation="1dp"
+            android:padding="4dp"
+            android:text="Code will appear here"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+        <!--        for qr code appear-->
+
+        <ImageView
+            android:id="@+id/idIMQRCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@color/white" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/idDayPass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="410dp"
+        android:elevation="1dp"
+        android:padding="4dp"
+        android:text="Temporary day pass"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <!--    for text view and edit data-->
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/idData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idQRCode"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Enter your name,mobile number and passport number "
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:hintTextColor = "@color/black"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textImeMultiLine|textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="15sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+
+    <!--        android:id="@+id/idData2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/idData"-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:layout_marginEnd="15dp"-->
+    <!--        android:hint="Enter your mobile number "-->
+    <!--        android:padding="5dp"-->
+    <!--        android:textColorHint="@color/white"-->
+    <!--        app:hintTextColor = "@color/white"-->
+    <!--        >-->
+
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/idEdtData2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:ems="10"-->
+    <!--            android:importantForAutofill="no"-->
+    <!--            android:inputType="textImeMultiLine|textMultiLine"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textColorHint="@color/white"-->
+    <!--            android:textSize="15sp"/>-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <Button
+        android:id="@+id/idBtnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idData"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_back"
+        android:text="Generate QR Code"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
