@@ -20,7 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class RegisterActivity extends AppCompatActivity {
 
     TextInputEditText ForeignerEmail;
-    TextInputEditText ForeignerPassword;
+    TextInputEditText ForeignerPassport;
+    TextInputEditText ForeignerContact;
     TextView ForeignerLogin;
     Button btnReg;
     FirebaseAuth fBAuth;
@@ -32,7 +33,8 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         ForeignerEmail = findViewById(R.id.ForeignerEmail);
-        ForeignerPassword = findViewById(R.id.ForeignerPass);
+        ForeignerPassport = findViewById(R.id.ForeignerPass);
+        ForeignerContact = findViewById(R.id.ForeignerContact);
         ForeignerLogin = findViewById(R.id.ForeignerLogin);
         btnReg = findViewById(R.id.btnReg);
 
@@ -50,18 +52,23 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void createUser(){
         String email = ForeignerEmail.getText().toString();
-        String password = ForeignerPassword.getText().toString();
+        String passport = ForeignerPassport.getText().toString();
+        String contact = ForeignerContact.getText().toString();
 
         if (TextUtils.isEmpty(email)){
             ForeignerEmail.setError("Email cannot be empty field");
             ForeignerEmail.requestFocus();
 
-        }else if (TextUtils.isEmpty(password)){
-            ForeignerPassword.setError("Password cannot be empty field");
-            ForeignerPassword.requestFocus();
+        }else if (TextUtils.isEmpty(passport)){
+            ForeignerPassport.setError("Passport cannot be empty field");
+            ForeignerPassport.requestFocus();
+
+        }else if (TextUtils.isEmpty(contact)){
+            ForeignerContact.setError("Contact number cannot be empty field");
+            ForeignerContact.requestFocus();
 
         }else{
-            fBAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            fBAuth.createUserWithEmailAndPassword(email,passport).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){

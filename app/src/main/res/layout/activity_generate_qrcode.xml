@@ -84,7 +84,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="15dp"
         android:layout_marginEnd="15dp"
-        android:hint="Enter your name,mobile number and passport number "
+        android:hint="Enter your passport number "
         android:padding="5dp"
         android:textColorHint="@color/black"
         app:hintTextColor = "@color/black"

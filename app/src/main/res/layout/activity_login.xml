@@ -57,11 +57,11 @@
             android:layout_marginTop="12dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ForeignerPassword"
+                android:id="@+id/ForeignerPassport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your valid password"
-                android:inputType="textPassword"/>
+                android:hint="Enter your valid passport number"
+                android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton

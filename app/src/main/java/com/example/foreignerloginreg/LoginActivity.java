@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     TextInputEditText ForeignerEmail;
-    TextInputEditText ForeignerPassword;
+    TextInputEditText ForeignerPassport;
     TextView ForeignerRegister;
     Button btnLogin;
     FirebaseAuth fBAuth;
@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         ForeignerEmail = findViewById(R.id.ForeignerEmail);
-        ForeignerPassword = findViewById(R.id.ForeignerPassword);
+        ForeignerPassport = findViewById(R.id.ForeignerPassport);
         ForeignerRegister = findViewById(R.id.ForeignerRegister);
         btnLogin = findViewById(R.id.btnLogin);
 
@@ -49,17 +49,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginUser(){
         String email = ForeignerEmail.getText().toString();
-        String password = ForeignerPassword.getText().toString();
+        String passport = ForeignerPassport.getText().toString();
 
         if (TextUtils.isEmpty(email)){
             ForeignerEmail.setError("Email cannot be empty field");
             ForeignerEmail.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
-            ForeignerPassword.setError("Password cannot be empty field");
-            ForeignerPassword.requestFocus();
+        }else if (TextUtils.isEmpty(passport)){
+            ForeignerPassport.setError("Passport cannot be empty field");
+            ForeignerPassport.requestFocus();
 
         }else{
-            fBAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            fBAuth.signInWithEmailAndPassword(email,passport).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
